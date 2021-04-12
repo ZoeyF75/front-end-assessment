@@ -1,15 +1,7 @@
 import Article from "./Article";
 import Student from "./Student";
 
-const People = ({ people }) => {
-  const calculateAvg = (avg) => {
-    let total = 0;
-    avg.forEach(number => {
-      total += Number.parseInt(number);
-    });
-    return `${Math.floor(total / avg.length * 100) / 100}%`;
-  }
-    
+const People = ({ people }) => {  
   return (
     <>
       <div>

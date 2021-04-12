@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 const Article = ({ student }) => {
   const [visibility, setVisibility] = useState(false);
+  const [text, setText] = useState('+');
 
   const calculateAvg = (avg) => {
     let total = 0;
@@ -21,13 +22,9 @@ const Article = ({ student }) => {
   }
 
   const onClick = () => {
-    console.log("button clicked");
     visibility ? setVisibility(false) : setVisibility(true);
-    change();
+    visibility ? setText("+") : setText("-");
   }
-
-  const change = () =>  visibility ? document.querySelector('#toggler').textContent = "+" : document.querySelector('#toggler').textContent = "-"
-  
 
   return (
     <article>
@@ -43,7 +40,7 @@ const Article = ({ student }) => {
         </div>
       </div>
       <div className="rightContainer">
-  <button type="button" className="accordion_button" id="toggler" onClick={onClick}>+</button>
+      <button type="button" className="accordion_button" id="toggler" onClick={onClick}>{text}</button>
       </div>
     </article>
   )

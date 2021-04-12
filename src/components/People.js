@@ -6,7 +6,9 @@ const People = ({ people }) => {
   const [searchTerm, setSearchTerm] = useState('');
   return (
     <>
-      <textarea placeholder="Search for a name..." className="text" id="textareaID" required minLength="1" onChange={event => {setSearchTerm(event.target.value)} }></textarea>
+      <textarea placeholder="Search by name" className="text" id="textareaID" required minLength="1" onChange={event => {setSearchTerm(event.target.value)} }></textarea>
+      <textarea placeholder="Search by tag" className="text" id="textareaID" required minLength="1"></textarea>
+
       <div>
         {!people.students ? 
           <div>loading...</div> 

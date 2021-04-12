@@ -26,9 +26,7 @@ const People = ({ people }) => {
             student={student} 
           />
         ))
-       
         }
-        hello
       </div>
     </>
   )

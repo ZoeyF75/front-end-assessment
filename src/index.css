@@ -1,5 +1,5 @@
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .container {
@@ -20,7 +20,7 @@ h1 {
 
 img {
   border-radius: 50%;
-  border: 1px solid rgb(146, 146, 146);
+  border: 1px solid rgb(180, 179, 179);
   margin: 1.5em
 }
 

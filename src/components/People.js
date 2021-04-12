@@ -1,5 +1,5 @@
 import Article from "./Article";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 //People is the plural, maps through list of students and makes article for each one
 const People = ({ people }) => { 

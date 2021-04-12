@@ -17,7 +17,7 @@ const Article = ({ student }) => {
         <div className="text">Email: {student.email}</div>
         <div className="text">Company: {student.company}</div>
         <div className="text">Skill: {student.skill}</div>
-        <div className="text">Average: {student.grades}</div>
+        <div className="text">Average: {calculateAvg(student.grades)}</div>
       </div>
     </article>
   )

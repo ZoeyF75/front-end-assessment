@@ -6,7 +6,7 @@ body {
   max-width: 700px;
   margin: 7em auto;
   overflow: auto;
-  min-height: 500px;
+  max-height: 600px;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 5px;
   background-color: white;
@@ -47,4 +47,16 @@ article {
   padding: 0.2em;
   padding-left: 1.5em;
   color: grey;
+}
+
+textarea {
+  border: none;
+  border-bottom: 1px solid rgb(180, 179, 179);
+  outline: none;
+  width: 630px;
+  height: 40px;
+  resize: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: x-large;
+  margin: 0.5em;
 }

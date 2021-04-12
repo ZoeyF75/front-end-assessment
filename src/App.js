@@ -34,10 +34,9 @@ function App() {
   // const average = people[0].grades;
   
   return (
-    <div className="App">
-      <header className="container">
+    <div className="container">
+        <textarea placeholder="Search for a name..." className="text" required minlength="1"></textarea>
         <People people={people}/>
-      </header>
     </div>
   );
 }

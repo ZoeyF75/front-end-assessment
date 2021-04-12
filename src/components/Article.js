@@ -6,7 +6,7 @@ const Article = ({ student }) => {
   const [visibility, setVisibility] = useState(false);
   const [text, setText] = useState('+');
   const [tag, setTag] = useState([]);
-  const [people, setPeople] = useState([]);
+  // const [people, setPeople] = useState([]);
 
    //adds tag to student data, need to update data
    let tagID;

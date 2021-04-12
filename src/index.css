@@ -86,6 +86,8 @@ textarea {
 
 #toggleShow {
   display: inline-flexbox;
+  margin: 0.1em;
+  margin-left: 1.5em;
 }
 
 #toggleHide {

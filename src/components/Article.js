@@ -12,10 +12,22 @@ const Article = ({ student }) => {
     return `${Math.floor(total / avg.length * 100) / 100}%`;
   }
 
+  const test = (grades) => {
+    let testScores = [];
+    for (let i = 0; i < grades.length; i++) {
+      testScores.push(`Test ${i+1}: ${Number.parseInt(grades[i])}%`);
+    }
+    return testScores;
+  }
+
   const onClick = () => {
     console.log("button clicked");
     visibility ? setVisibility(false) : setVisibility(true);
+    change();
   }
+
+  const change = () =>  visibility ? document.querySelector('#toggler').textContent = "+" : document.querySelector('#toggler').textContent = "-"
+  
 
   return (
     <article>
@@ -27,13 +39,11 @@ const Article = ({ student }) => {
           <div className="text">Company: {student.company}</div>
           <div className="text">Skill: {student.skill}</div>
           <div className="text">Average: {calculateAvg(student.grades)}</div>
-          <div className="text" id={visibility ? "toggleShow" : "toggleHide" }>Test Scores</div>
-          <div className="text" id={visibility ? "toggleShow" : "toggleHide" }>Test Scores</div>
-          <div className="text" id={visibility ? "toggleShow" : "toggleHide" }>Test Scores</div>
+          {test(student.grades).map((grade) => <div className="text" id={visibility ? "toggleShow" : "toggleHide" }>{grade}</div>)}
         </div>
       </div>
       <div className="rightContainer">
-      <button type="button" class="accordion_button" onClick={onClick}>+</button>
+  <button type="button" className="accordion_button" id="toggler" onClick={onClick}>+</button>
       </div>
     </article>
   )

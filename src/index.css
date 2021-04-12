@@ -117,5 +117,5 @@ p {
 .tagContainer {
   display: flex;
   flex-direction: row;
-  margin-left: 1.5em;
+  margin-left: 1em;
 }

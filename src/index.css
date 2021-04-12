@@ -16,7 +16,7 @@ body {
 h1 {
   font-size: xx-large;
   margin-bottom: 15px;
-  margin-top: 0px;
+  margin-top: 0.5em;
 }
 
 img {
@@ -28,9 +28,9 @@ img {
 article {
   display: flex;
   flex-direction: row;
-  align-items: center;
   border-bottom: 2px solid rgba(128, 128, 128, 0.233);
   padding-bottom: 1em;
+  justify-content: space-between;
 }
 
 .textContainer {
@@ -60,4 +60,27 @@ textarea {
   font-family: 'Raleway', sans-serif;
   font-size: x-large;
   margin: 0.5em;
+  margin-bottom: 0em;
 }
+
+.accordion_button {
+  display: flex;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: xxx-large;
+  background: white;
+  color: rgb(180, 179, 179);
+  margin-top: 0.1em;
+  
+}
+
+.leftContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.rightContainer {
+  padding-right: 0.5em;
+}
+

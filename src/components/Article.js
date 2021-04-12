@@ -1,12 +1,35 @@
 import React from 'react';
 import { useState } from 'react';
+import People from "./People";
 
 const Article = ({ student }) => {
   const [visibility, setVisibility] = useState(false);
   const [text, setText] = useState('+');
   const [tag, setTag] = useState([]);
-  const [empty, setEmpty] = useState('');
+  const [people, setPeople] = useState([]);
+
+   //adds tag to student data, need to update data
+   let tagID;
+   let tagContent;
+   document.querySelectorAll("article").forEach(article => {
+    document.querySelectorAll("p").forEach(p => {
+      tagContent = p.textContent
+    })
+    if (article.textContent.includes(student.firstName)) {
+      tagID = student.id; //returns id of where tag is entered
+      if (student.id = tagID) {
+        student.tag = tagContent;
+      }
+    }
+  })
   
+  let students = [];
+  students.push(student);
+  let newPeople = {
+    studentObject: students
+  };
+  console.log("newpeople",newPeople);
+
   const calculateAvg = (avg) => {
     let total = 0;
     avg.forEach(number => {
@@ -35,11 +58,12 @@ const Article = ({ student }) => {
       document.querySelectorAll("textarea.text").forEach(textArea => {
         textArea.value = ''; //sets value to zero but placeholders remain
       })
-      console.log(tag);
     }
   }
 
   return (
+    <div className="container">
+        {/* <People people={people}/> */}
     <article>
       <div className="leftContainer">
         <img src={student.pic} alt="" width="150" height="150"></img>
@@ -60,6 +84,7 @@ const Article = ({ student }) => {
       <button type="button" className="accordion_button" id="toggler" onClick={onClick}>{text}</button>
       </div>
     </article>
+    </div>
   )
 }
 

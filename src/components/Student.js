@@ -1,9 +1,12 @@
-const Student = (task) => {
+const Student = ({ student }) => {
   return (
     <div>
-      {task}
+      <h3>
+        {student.firstName}{' '}
+      </h3>
+      <p>{student.lastName}</p>
     </div>
   )
 }
 
-export default Student
+export default Student;

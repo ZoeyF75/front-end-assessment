@@ -37,15 +37,6 @@ function App() {
     <div className="App">
       <header className="container">
         <People people={people}/>
-              
-        {/* <Article 
-          firstname={firstname}
-          lastname={lastname}
-          email={email}
-          company={company}
-          skill={skill}
-          average={average}
-         /> */}
       </header>
     </div>
   );
